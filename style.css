@@ -30,7 +30,11 @@ b { color:var(--hi); font-weight:600; }
 /* Layout */
 main { padding:24px 10% 40px; }
 /* Name block */
-.id { margin:24px 0 28px; }
+.id { margin:24px 0 28px; display:flex; align-items:center; gap:32px; flex-wrap:wrap; }
+.avatar { width:140px; height:140px; border-radius:50%; object-fit:cover; flex-shrink:0;
+          border:1px solid #2a2a2a; }
+/* Optional: add class="avatar phosphor" for a green-screen tinted photo */
+.avatar.phosphor { filter:grayscale(1) sepia(1) hue-rotate(70deg) saturate(3) brightness(.9) contrast(1.1); }
 .name { margin:0; font-size:clamp(2rem, 5.5vw, 3.5rem); font-weight:600; line-height:1.05;
         letter-spacing:.08em; color:var(--hi);
         text-shadow:0 0 6px rgba(51,255,102,.9), 0 0 18px rgba(51,255,102,.55), 0 0 40px rgba(51,255,102,.3); }
@@ -43,6 +47,8 @@ main { padding:24px 10% 40px; }
 .pf { background:var(--fg); color:var(--bg); text-shadow:none; padding:0 6px; margin-right:12px; }
 
 .lead { color:var(--hi); max-width:72ch; }
+.prose p { max-width:76ch; margin:0 0 14px; }
+.prose ul.log li { max-width:80ch; margin-bottom:12px; }
 .note { color:var(--dim); margin-top:16px; }
 
 /* Key/value profile */
@@ -84,6 +90,8 @@ footer p { margin:0; }
 @media (max-width:700px) {
   .nav, main, footer, .fkeys { padding-left:5%; padding-right:5%; }
   .panel { padding:16px; }
+  .id { gap:20px; }
+  .avatar { width:96px; height:96px; }
   footer { grid-template-columns:1fr; gap:16px; }
   td:first-child { white-space:normal; }
   .fkeys .hint { display:none; }
@@ -93,3 +101,6 @@ footer p { margin:0; }
   .cursor { animation:none; }
   html { scroll-behavior:auto; }
 }
+
+/* Footer links */
+.links a { margin-right:14px; }

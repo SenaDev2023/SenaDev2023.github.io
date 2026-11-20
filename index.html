@@ -7,6 +7,14 @@
   <meta name="description" content="Chris Sena: C++ systems developer in Denver. USMC/USAF veteran, OpenDDS contributor.">
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <!-- Favicon + link-preview card (LinkedIn, Slack, iMessage) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23000'/%3E%3Ctext x='3' y='23' font-family='monospace' font-size='18' font-weight='bold' fill='%2333ff66'%3E%3E_%3C/text%3E%3C/svg%3E">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Chris Sena // Systems">
+  <meta property="og:description" content="C++ systems · DDS middleware · Denver. USMC/USAF veteran, OpenDDS contributor.">
+  <meta property="og:url" content="https://senadev2023.github.io/">
+  <meta property="og:image" content="https://senadev2023.github.io/og.png">
+  <meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
   <div class="crt" aria-hidden="true"></div>
@@ -18,23 +26,20 @@
 
   <main>
     <div class="id">
-      <h1 class="name">CHRIS SENA</h1>
-      <p class="sub">C++ systems · DDS middleware · Denver</p>
+      <img class="avatar" src="https://github.com/SenaDev2023.png?size=320" alt="Chris Sena" width="140" height="140">
+      <div>
+        <h1 class="name">CHRIS SENA</h1>
+        <p class="sub">C++ systems · DDS middleware · Denver</p>
+      </div>
     </div>
     <pre id="boot" class="boot" aria-hidden="true"></pre>
 
     <!-- PF1 -->
-    <section id="about" class="panel">
-      <h2><span class="pf">PF1</span>SYSTEM PROFILE</h2>
-      <p class="lead">Systems developer in Denver. I came to software by way of field radios, water mains and an IBM mainframe, and I do my best work close to the metal: middleware, protocols, and the code other code depends on.</p>
-      <dl class="kv">
-        <dt>NAME</dt>     <dd>CHRIS SENA</dd>
-        <dt>ROLE</dt>     <dd>Full stack developer, hubley</dd>
-        <dt>FOCUS</dt>    <dd>C++ systems · DDS middleware · distributed systems</dd>
-        <dt>BASE</dt>     <dd>Denver, CO</dd>
-        <dt>STATUS</dt>   <dd>ONLINE</dd>
-      </dl>
-      <p class="note">// Why the green screen? My first production terminal was an IBM z/OS mainframe at a water utility. I traced customer payments through COBOL before I ever wrote a line of C++.</p>
+    <section id="about" class="panel prose">
+      <h2><span class="pf">PF1</span>ABOUT ME</h2>
+      <p>My name is Chris Sena, and I go by <a href="https://github.com/SenaDev2023">SenaDev2023</a> on GitHub. By day I'm a full stack developer at hubley, building on SharePoint and TypeScript. The rest of the time I work in C++ on the layer most people never see: middleware, serialization, and the code other code depends on.</p>
+      <p>I didn't start in software. I was a Marine radio chief, then a water utility SCADA operator, where my first production terminal was an IBM z/OS mainframe and I traced customer payments through COBOL before I ever wrote a line of C++. That's why this site looks like a green screen.</p>
+      <p>Everything here is out in the open. The site's source <a href="https://github.com/SenaDev2023/SenaDev2023.github.io">lives in a Git repository</a>, so every edit is on the record, and my working notes on open-source fixes are in <a href="https://github.com/SenaDev2023/open-source-fixes">open-source-fixes</a>.</p>
     </section>
 
     <!-- PF2 -->
@@ -52,39 +57,14 @@
     </section>
 
     <!-- PF3 -->
-    <section id="code" class="panel">
+    <section id="code" class="panel prose">
       <h2><span class="pf">PF3</span>OPEN SOURCE</h2>
-      <table>
-        <thead><tr><th>PROJECT</th><th>STATUS</th><th>WORK</th></tr></thead>
-        <tbody>
-          <tr>
-            <td>OpenDDS</td>
-            <td class="ok">MERGED</td>
-            <td><a href="https://github.com/OpenDDS/OpenDDS/pull/5275">PR #5275</a>: check CDR extraction results in UpdateManager (issue #5232).</td>
-          </tr>
-          <tr>
-            <td>OpenDDS</td>
-            <td class="ok">MERGED</td>
-            <td><a href="https://github.com/OpenDDS/OpenDDS/pull/5339">PR #5339</a>: check CDR extraction in <code>Manager::pushImage</code>. Ships in 3.35.0.</td>
-          </tr>
-          <tr>
-            <td>OpenDDS</td>
-            <td class="wip">ACTIVE</td>
-            <td>10 of 18 unchecked deserialization sites in UpdateManager fixed. Final 8 next, then on to the transport layer.</td>
-          </tr>
-          <tr>
-            <td>LibreOffice</td>
-            <td class="ok">FIXED</td>
-            <td><a href="https://bugs.documentfoundation.org/show_bug.cgi?id=98856">tdf#98856</a>: VCL fix via <a href="https://gerrit.libreoffice.org/c/core/+/201201">Gerrit</a>, shipped in 26.8.0.</td>
-          </tr>
-          <tr>
-            <td>PX4-Autopilot</td>
-            <td class="wip">STUDYING</td>
-            <td>Embedded, multithreaded flight code.</td>
-          </tr>
-        </tbody>
-      </table>
-      <p class="note">// Field notes: <a href="https://github.com/SenaDev2023/open-source-fixes">open-source-fixes</a></p>
+      <p>Here's the open source work I've done so far.</p>
+      <ul class="log">
+        <li><b><a href="https://github.com/OpenDDS/OpenDDS">OpenDDS</a></b>: an open-source implementation of the DDS publish/subscribe middleware standard. I'm hardening UpdateManager against unchecked CDR deserialization. Two fixes are merged: <a href="https://github.com/OpenDDS/OpenDDS/pull/5275">PR #5275</a> (issue #5232) and <a href="https://github.com/OpenDDS/OpenDDS/pull/5339">PR #5339</a>, which ships in 3.35.0. That's 10 of 18 sites fixed, with the transport layer next. <span class="wip">[ACTIVE]</span></li>
+        <li><b><a href="https://www.libreoffice.org/">LibreOffice</a></b>: fixed <a href="https://bugs.documentfoundation.org/show_bug.cgi?id=98856">tdf#98856</a> in the VCL graphics layer, reviewed through <a href="https://gerrit.libreoffice.org/c/core/+/201201">Gerrit</a> and shipped in 26.8.0. <span class="ok">[FIXED]</span></li>
+        <li><b><a href="https://github.com/PX4/PX4-Autopilot">PX4-Autopilot</a></b>: open-source drone flight software. I'm reading through its embedded, multithreaded flight code. <span class="wip">[STUDYING]</span></li>
+      </ul>
 
       <h3>STACK</h3>
       <dl class="kv stack">
@@ -128,12 +108,15 @@
 
   <footer>
     <div><h4>LOCATION</h4><p>Denver, CO</p></div>
-    <div><h4>EMAIL</h4><p>chrisbsena5@gmail.com</p></div>
-    <div><h4>LINKS</h4><p><a href="https://github.com/SenaDev2023">GitHub</a></p></div>
+    <div><h4>EMAIL</h4><p><a href="mailto:chrisbsena5@gmail.com">chrisbsena5@gmail.com</a></p></div>
+    <div><h4>LINKS</h4><p class="links">
+      <a href="https://github.com/SenaDev2023">GitHub</a>
+      <a href="https://www.linkedin.com/in/netsena">LinkedIn</a>
+    </p></div>
   </footer>
 
   <nav class="fkeys" aria-label="Sections">
-    <a href="#about">PF1=PROFILE</a>
+    <a href="#about">PF1=ABOUT</a>
     <a href="#service">PF2=SERVICE</a>
     <a href="#code">PF3=CODE</a>
     <a href="#path">PF4=PATH</a>
@@ -178,8 +161,11 @@
     const map = { '1': 'about', '2': 'service', '3': 'code', '4': 'path', '5': 'offduty' };
     document.addEventListener('keydown', e => {
       const id = map[e.key];
-      if (id) document.getElementById(id).scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' });
+      const el = id && document.getElementById(id);
+      if (el && !el.hidden && el.offsetParent !== null) el
+        .scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' });
     });
   </script>
+
 </body>
 </html>
