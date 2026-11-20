@@ -29,6 +29,12 @@ b { color:var(--hi); font-weight:600; }
 
 /* Layout */
 main { padding:24px 10% 40px; }
+/* Name block */
+.id { margin:24px 0 28px; }
+.name { margin:0; font-size:clamp(2rem, 5.5vw, 3.5rem); font-weight:600; line-height:1.05;
+        letter-spacing:.08em; color:var(--hi);
+        text-shadow:0 0 6px rgba(51,255,102,.9), 0 0 18px rgba(51,255,102,.55), 0 0 40px rgba(51,255,102,.3); }
+.sub { margin:10px 0 0; color:var(--fg); letter-spacing:2px; }
 .boot { color:var(--dim); margin:0 0 24px; min-height:8.5em; font:inherit; }
 
 .panel { border:2px solid var(--dim); padding:20px 32px 24px; margin-bottom:28px; scroll-margin-top:24px; }
