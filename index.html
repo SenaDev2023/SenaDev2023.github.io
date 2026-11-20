@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CHRIS SENA // SYSTEMS</title>
+  <meta name="description" content="Chris Sena: C++ systems developer in Denver. USMC/USAF veteran, OpenDDS contributor.">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="crt" aria-hidden="true"></div>
+
+  <header class="nav">
+    <span class="prompt">chris@sena:~$ <span class="cmd">whoami</span><span class="cursor">&nbsp;</span></span>
+    <span class="status">SYS: SENA01 &nbsp; <span id="clock">--:--:--</span> MT</span>
+  </header>
+
+  <main>
+    <pre id="boot" class="boot" aria-hidden="true"></pre>
+
+    <!-- PF1 -->
+    <section id="about" class="panel">
+      <h2><span class="pf">PF1</span>SYSTEM PROFILE</h2>
+      <p class="lead">Systems developer in Denver. I came to software by way of field radios, water mains and an IBM mainframe, and I do my best work close to the metal: middleware, protocols, and the code other code depends on.</p>
+      <dl class="kv">
+        <dt>NAME</dt>     <dd>CHRIS SENA</dd>
+        <dt>ROLE</dt>     <dd>Full stack developer, hubley</dd>
+        <dt>FOCUS</dt>    <dd>C++ systems · DDS middleware · distributed systems</dd>
+        <dt>BASE</dt>     <dd>Denver, CO</dd>
+        <dt>STATUS</dt>   <dd>ONLINE</dd>
+      </dl>
+      <p class="note">// Why the green screen? My first production terminal was an IBM z/OS mainframe at a water utility. I traced customer payments through COBOL before I ever wrote a line of C++.</p>
+    </section>
+
+    <!-- PF2 -->
+    <section id="service" class="panel">
+      <h2><span class="pf">PF2</span>SERVICE RECORD</h2>
+      <ul class="log">
+        <li><b>USMC 2004–2010</b>: Radio Chief, artillery.</li>
+        <li><b>Iraq 2005</b>: Fallujah, attached to RCT-2. Volunteered for a general officer's personal security detail.</li>
+        <li><b>Iraq 2007</b>: Al Anbar. Radio Chief for an 8-man Police Transition Team working alongside 2/7.</li>
+        <li><b>African Lion 2010</b>: Morocco, 4th Marine Division HQ element.</li>
+        <li><b>Navy Achievement Medal</b>: for communications work outside my MOS.</li>
+        <li><b>USAF 2013–2016</b>: Security Forces, plus Oracle database work at ARPC HQ.</li>
+        <li><b>Clearance</b>: Secret (inactive, eligible for reinstatement).</li>
+      </ul>
+    </section>
+
+    <!-- PF3 -->
+    <section id="code" class="panel">
+      <h2><span class="pf">PF3</span>OPEN SOURCE</h2>
+      <table>
+        <thead><tr><th>PROJECT</th><th>STATUS</th><th>WORK</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>OpenDDS</td>
+            <td class="ok">MERGED</td>
+            <td><a href="https://github.com/OpenDDS/OpenDDS/pull/5275">PR #5275</a>: check CDR extraction results in UpdateManager (issue #5232).</td>
+          </tr>
+          <tr>
+            <td>OpenDDS</td>
+            <td class="ok">MERGED</td>
+            <td><a href="https://github.com/OpenDDS/OpenDDS/pull/5339">PR #5339</a>: check CDR extraction in <code>Manager::pushImage</code>. Ships in 3.35.0.</td>
+          </tr>
+          <tr>
+            <td>OpenDDS</td>
+            <td class="wip">ACTIVE</td>
+            <td>10 of 18 unchecked deserialization sites in UpdateManager fixed. Final 8 next, then on to the transport layer.</td>
+          </tr>
+          <tr>
+            <td>LibreOffice</td>
+            <td class="ok">FIXED</td>
+            <td><a href="https://bugs.documentfoundation.org/show_bug.cgi?id=98856">tdf#98856</a>: VCL fix via <a href="https://gerrit.libreoffice.org/c/core/+/201201">Gerrit</a>, shipped in 26.8.0.</td>
+          </tr>
+          <tr>
+            <td>PX4-Autopilot</td>
+            <td class="wip">STUDYING</td>
+            <td>Embedded, multithreaded flight code.</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="note">// Field notes: <a href="https://github.com/SenaDev2023/open-source-fixes">open-source-fixes</a></p>
+
+      <h3>STACK</h3>
+      <div class="chips">
+        <span>C++17</span><span>C</span><span>C#</span><span>TypeScript</span><span>SQL</span>
+        <span>PowerShell</span><span>Python</span><span>MSVC</span><span>git / Gerrit</span>
+        <span>SPFx / SharePoint</span><span>Power Platform</span>
+      </div>
+    </section>
+
+    <!-- PF4 -->
+    <section id="path" class="panel">
+      <h2><span class="pf">PF4</span>PATH</h2>
+      <table>
+        <tbody>
+          <tr><td>2004–10</td><td>USMC Radio Chief</td></tr>
+          <tr><td>2013–16</td><td>USAF Security Forces. First contact with SQL.</td></tr>
+          <tr><td>2015</td><td>A.A. Mass Communication, Community College of Denver</td></tr>
+          <tr><td>2018</td><td>B.A. Journalism, MSU Denver · Denver Water internship</td></tr>
+          <tr><td>2018–19</td><td>Water distribution, Alexandria, LA. Main repair crew.</td></tr>
+          <tr><td>2019–21</td><td>Baton Rouge Water: SCADA operator, IBM z/OS mainframe, COBOL</td></tr>
+          <tr><td>2021–25</td><td>Sparkhound: built a PowerShell data pipeline for Alabama Medicaid (deploys went from hours to minutes); migrated SQL Server data into Power Platform for Retirement Systems of Alabama</td></tr>
+          <tr><td>2025–</td><td>hubley: SPFx, SharePoint, TypeScript; accessibility remediation for the hubley Shared Library</td></tr>
+          <tr><td>2026–</td><td>OpenDDS contributor</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- PF5 -->
+    <section id="offduty" class="panel">
+      <h2><span class="pf">PF5</span>OFF DUTY</h2>
+      <ul class="log">
+        <li><b>Habitat for Humanity</b>: I model houses in BIM (Bonsai/BlenderBIM) and produce material takeoffs for builds.</li>
+        <li><b>Second Chance Bike Shop</b>: learning to wrench.</li>
+        <li><b>Neighborhood bike farmer</b>: I collect old bikes and parts from neighbors and donate them to Bikes Together in Denver.</li>
+        <li><b>ACCU</b>: member, Association of C and C++ Users.</li>
+        <li><b>Next up</b>: learning to ride a horse.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <div><h4>LOCATION</h4><p>Denver, CO</p></div>
+    <div><h4>EMAIL</h4><p>chrisbsena5@gmail.com</p></div>
+    <div><h4>LINKS</h4><p><a href="https://github.com/SenaDev2023">GitHub</a></p></div>
+  </footer>
+
+  <nav class="fkeys" aria-label="Sections">
+    <a href="#about">PF1=PROFILE</a>
+    <a href="#service">PF2=SERVICE</a>
+    <a href="#code">PF3=CODE</a>
+    <a href="#path">PF4=PATH</a>
+    <a href="#offduty">PF5=OFF-DUTY</a>
+    <span class="hint">KEYS 1–5</span>
+  </nav>
+
+  <script>
+    const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // Boot sequence
+    const lines = [
+      'IKJ56455I SENA LOGON IN PROGRESS',
+      'LOADING PROFILE ......... OK',
+      'MOUNTING /service ....... OK',
+      'MOUNTING /opendds ....... OK',
+      'READY'
+    ];
+    const boot = document.getElementById('boot');
+    if (reduce) boot.textContent = lines.join('\n');
+    else lines.forEach((l, i) => setTimeout(() => { boot.textContent += l + '\n'; }, i * 350));
+
+    // Denver clock
+    const clock = document.getElementById('clock');
+    const tick = () => clock.textContent = new Date().toLocaleTimeString('en-US', { hour12: false, timeZone: 'America/Denver' });
+    tick(); setInterval(tick, 1000);
+
+    // Keys 1-5 jump to sections
+    const map = { '1': 'about', '2': 'service', '3': 'code', '4': 'path', '5': 'offduty' };
+    document.addEventListener('keydown', e => {
+      const id = map[e.key];
+      if (id) document.getElementById(id).scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' });
+    });
+  </script>
+</body>
+</html>
