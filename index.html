@@ -33,7 +33,6 @@
         <p class="sub">C++ systems · DDS middleware · Web · Denver</p>
       </div>
     </div>
-    <pre id="boot" class="boot" aria-hidden="true"></pre>
 
     <!-- PF1 -->
     <section id="about" class="panel prose">
@@ -147,27 +146,11 @@
   <script>
     const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    // Boot: NProgress loading bar + greeting from the visitor's time zone and clock (no IP lookup)
-    const boot = document.getElementById('boot');
-    const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || 'Unknown';
-    const where = tz.split('/').pop().replace(/_/g, ' ').toUpperCase();
-    const h = new Date().getHours();
-    const greet = h < 5 ? 'WORKING LATE' : h < 12 ? 'GOOD MORNING' : h < 18 ? 'GOOD AFTERNOON' : 'GOOD EVENING';
-    const lines = [
-      'PROFILE FOR C.B. SENA LOGON IN PROGRESS',
-      `CONNECTION FROM ${where} ...... OK`,
-      'MOUNTING /service ....... OK',
-      'MOUNTING /opendds ....... OK',
-      `READY. ${greet}. WELCOME, GUEST FROM ${where}.`,
-    ];
-    const np = window.NProgress;              // undefined if the CDN is blocked; page still works
-    np?.configure({ showSpinner: false, trickle: false });
+    // Loading bar: runs while the page and its images load (no-op if the CDN is blocked)
+    const np = window.NProgress;
+    np?.configure({ showSpinner: false });
     np?.start();
-    if (reduce) { boot.textContent = lines.join('\n'); np?.done(); }
-    else lines.forEach((l, i) => setTimeout(() => {
-      boot.textContent += l + '\n';
-      i === lines.length - 1 ? np?.done() : np?.set((i + 1) / lines.length);
-    }, i * 350));
+    addEventListener('load', () => np?.done());
 
     // World clocks (Intl handles time zones and DST; no library needed)
     const ZONES = [
