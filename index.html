@@ -147,16 +147,18 @@
   <script>
     const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    // Boot: NProgress loading bar (library) + time-of-day greeting from the visitor's clock
+    // Boot: NProgress loading bar + greeting from the visitor's time zone and clock (no IP lookup)
     const boot = document.getElementById('boot');
+    const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || 'Unknown';
+    const where = tz.split('/').pop().replace(/_/g, ' ').toUpperCase();
     const h = new Date().getHours();
     const greet = h < 5 ? 'WORKING LATE' : h < 12 ? 'GOOD MORNING' : h < 18 ? 'GOOD AFTERNOON' : 'GOOD EVENING';
     const lines = [
       'PROFILE FOR C.B. SENA LOGON IN PROGRESS',
-      'LOADING PROFILE ......... OK',
+      `CONNECTION FROM ${where} ...... OK`,
       'MOUNTING /service ....... OK',
       'MOUNTING /opendds ....... OK',
-      `READY. ${greet}, GUEST.`,
+      `READY. ${greet}. WELCOME, GUEST FROM ${where}.`,
     ];
     const np = window.NProgress;              // undefined if the CDN is blocked; page still works
     np?.configure({ showSpinner: false, trickle: false });
