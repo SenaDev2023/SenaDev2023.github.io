@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Chris Sena: C++ Systems Developer, Denver</title>
-  <meta name="description" content="Chris Sena: C++ systems developer in Denver. USMC/USAF veteran, OpenDDS contributor.">
+  <meta name="description" content="Chris Sena: C++ systems and web developer in Denver. USMC/USAF veteran, OpenDDS contributor.">
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <!-- Favicon + link-preview card (LinkedIn, Slack, iMessage) -->
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23000'/%3E%3Ctext x='3' y='23' font-family='monospace' font-size='18' font-weight='bold' fill='%2333ff66'%3E%3E_%3C/text%3E%3C/svg%3E">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Chris Sena: C++ Systems Developer, Denver">
-  <meta property="og:description" content="C++ systems · DDS middleware · Denver. USMC/USAF veteran, OpenDDS contributor.">
+  <meta property="og:description" content="C++ systems · DDS middleware · Web · Denver. USMC/USAF veteran, OpenDDS contributor.">
   <meta property="og:url" content="https://senadev2023.github.io/">
   <meta property="og:image" content="https://senadev2023.github.io/og.png">
   <meta name="twitter:card" content="summary_large_image">
@@ -29,7 +29,7 @@
       <img class="avatar" src="https://github.com/SenaDev2023.png?size=320" alt="Chris Sena" width="140" height="140">
       <div>
         <h1 class="name">CHRIS SENA</h1>
-        <p class="sub">C++ systems · DDS middleware · Denver</p>
+        <p class="sub">C++ systems · DDS middleware · Web · Denver</p>
       </div>
     </div>
     <pre id="boot" class="boot" aria-hidden="true"></pre>
@@ -37,9 +37,25 @@
     <!-- PF1 -->
     <section id="about" class="panel prose">
       <h2><span class="pf">PF1</span>ABOUT ME</h2>
-      <p>C++ systems developer. I work on the layer most people never see: middleware. Day job: full stack at hubley (SharePoint, React, TypeScript).</p>
-      <p>First production terminal: an IBM z/OS mainframe at a water utility. </p>
-      <p>Source: <a href="https://github.com/SenaDev2023/SenaDev2023.github.io">site repo</a> · Field notes: <a href="https://github.com/SenaDev2023/open-source-fixes">open-source-fixes</a></p>
+      <p>I build software at two layers: C++ middleware underneath, web apps on top. Both come down to the same habit: find where data crosses a boundary and make sure it can't break what's on the other side.</p>
+
+      <h3>C++ / SYSTEMS</h3>
+      <ul class="log">
+        <li><b>Middleware</b>: hardening deserialization in OpenDDS, the pub/sub layer real-time systems use to talk to each other. Bounds checks and input validation so bad data can't crash the process.</li>
+        <li><b>Graphics</b>: fixed a VCL rendering bug in LibreOffice (shipped in 26.8.0).</li>
+        <li><b>Embedded</b>: reading PX4's multithreaded flight stack.</li>
+      </ul>
+
+      <h3>WEB / M365</h3>
+      <ul class="log">
+        <li><b>Product</b>: full stack on hubley, a SharePoint intranet product. SPFx web parts in React and TypeScript.</li>
+        <li><b>Reliability</b>: paging and list-threshold fixes so large SharePoint lists don't break features or send duplicate requests.</li>
+        <li><b>Accessibility</b>: remediation across the hubley Shared Library.</li>
+        <li><b>Data</b>: before that, PowerShell pipelines and SQL Server migrations for state agencies.</li>
+      </ul>
+
+      <p>First production terminal: an IBM z/OS mainframe at a water utility.</p>
+      <p>Field notes: <a href="https://github.com/SenaDev2023/open-source-fixes">open-source-fixes</a></p>
     </section>
 
     <!-- PF2 -->
@@ -70,7 +86,7 @@
         <dt>LANG</dt> <dd class="chips"><span>C++17</span><span>C</span><span>C#</span><span>TypeScript</span><span>Python</span><span>PowerShell</span><span>SQL</span></dd>
         <dt>SYS</dt>  <dd class="chips"><span>Linux</span><span>MSVC</span><span>git / Gerrit</span></dd>
         <dt>DB</dt>   <dd class="chips"><span>SQL Server</span><span>Oracle</span></dd>
-        <dt>WEB</dt>  <dd class="chips"><span>SPFx / SharePoint</span></dd>
+        <dt>WEB</dt>  <dd class="chips"><span>SPFx / SharePoint</span><span>React</span></dd>
       </dl>
     </section>
 
