@@ -6,6 +6,7 @@
   <title>Chris Sena: C++ Systems Developer, Denver</title>
   <meta name="description" content="Chris Sena: C++ systems and web developer in Denver. USMC/USAF veteran, OpenDDS contributor.">
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.css">
   <link rel="stylesheet" href="style.css">
   <!-- Favicon + link-preview card (LinkedIn, Slack, iMessage) -->
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23000'/%3E%3Ctext x='3' y='23' font-family='monospace' font-size='18' font-weight='bold' fill='%2333ff66'%3E%3E_%3C/text%3E%3C/svg%3E">
@@ -142,20 +143,29 @@
     <span class="hint">KEYS 1–5</span>
   </nav>
 
+  <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.js"></script>
   <script>
     const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    // Boot sequence
+    // Boot: NProgress loading bar (library) + time-of-day greeting from the visitor's clock
+    const boot = document.getElementById('boot');
+    const h = new Date().getHours();
+    const greet = h < 5 ? 'WORKING LATE' : h < 12 ? 'GOOD MORNING' : h < 18 ? 'GOOD AFTERNOON' : 'GOOD EVENING';
     const lines = [
       'PROFILE FOR C.B. SENA LOGON IN PROGRESS',
       'LOADING PROFILE ......... OK',
       'MOUNTING /service ....... OK',
       'MOUNTING /opendds ....... OK',
-      'READY'
+      `READY. ${greet}, GUEST.`,
     ];
-    const boot = document.getElementById('boot');
-    if (reduce) boot.textContent = lines.join('\n');
-    else lines.forEach((l, i) => setTimeout(() => { boot.textContent += l + '\n'; }, i * 350));
+    const np = window.NProgress;              // undefined if the CDN is blocked; page still works
+    np?.configure({ showSpinner: false, trickle: false });
+    np?.start();
+    if (reduce) { boot.textContent = lines.join('\n'); np?.done(); }
+    else lines.forEach((l, i) => setTimeout(() => {
+      boot.textContent += l + '\n';
+      i === lines.length - 1 ? np?.done() : np?.set((i + 1) / lines.length);
+    }, i * 350));
 
     // World clocks (Intl handles time zones and DST; no library needed)
     const ZONES = [
